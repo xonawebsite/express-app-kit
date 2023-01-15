@@ -5,6 +5,17 @@ This library is intended to become a robust, easy to use, helper kit for creatin
 
 Right now, it just features a short way to create an express app.
 
+# The Goal
+I just want to say this: I'm a Rails fan for many reasons...
+
+Express app kit comes as an inspiration after asking "How to make express more like rails?".
+
+The idea is to make possible to create AND manage a project with a CLI commands (maybe you're thinking in `express-generator` right now (and yeah, me too, but, I want to make something twice better, imagine to create a MVC api with database integration and JWT auth already included)).
+
+This library is the very early start point to my plan. This library will provide several tools to make developers' life easier, initially reducing the amount of code needed to get an express app up and running at least 4 times.
+
+Next step is to add database and authentication helpers, so the developer can add database support (ideally) with one line.
+
 ## Installation
 Use your preferred package manager to install it in your project:
 
@@ -62,8 +73,20 @@ app.listen(3000, () => {
 });
 ```
 
+## Documentation
+Documentation is available [here](https://express-app-kit.github.io).
+
 ## Notes
 The resulting app is already packed by default with json support, helmet, morgan, cookieParser and expressSession.
 
 ## Contributing
 Every contribution is welcome. Take a look at the issues and public project, pick a task, solve it, create a passing test for it, and send a pull request.
+
+
+## Roadmap
+The general upcomming features are these:
+- Easy to use built-in database-agnostic authentication and authorization system
+- One-function-call database integration
+- One-function-call session management
+- CLI tool to scaffold and manage the created project
+- Plug and play interface
