@@ -5,6 +5,8 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
+    "build:doc": "jsdoc -r ./dist -d ./docs",
+    "prebuild:doc": "npm run build",
     "test": "mocha",
     "pretest": "npm run build"
   },
@@ -24,6 +26,7 @@
     "@types/morgan": "^1.9.4",
     "@types/node": "^18.11.18",
     "chai": "^4.3.7",
+    "jsdoc": "^4.0.0",
     "mocha": "^10.2.0",
     "typescript": "^4.9.4"
   },

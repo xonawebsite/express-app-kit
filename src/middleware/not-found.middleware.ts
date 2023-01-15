@@ -1,5 +1,11 @@
 import { NotFoundMiddlewareConfig } from '../interfaces/not-found-middleware-config';
 
+/**
+ * simple page not found middleware
+ * @function notFoundMiddleware
+ * @param {NotFoundMiddlewareConfig} middleware configuration object
+ * @return {RequestHandler} middleware function
+ **/
 export function notFoundMiddleware(config: NotFoundMiddlewareConfig = { mode: 'json' }) {
 	if (config.mode === 'json') {
 		return (req: any, res: any) => {

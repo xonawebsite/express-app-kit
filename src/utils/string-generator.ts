@@ -1,3 +1,9 @@
+/**
+ * Generates a random string with letters and numbers
+ * @function stringGenerator
+ * @param {number} length	string desired length
+ * @return {string} result 	the generated string
+ **/
 export function stringGenerator(length: number = 32): string {
 	const chars: string[] = 'asdfghjklzxcvbnmqwertyuiop0123456789'.split('');
 	const result: string[] = [];

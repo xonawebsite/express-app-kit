@@ -74,7 +74,7 @@ app.listen(3000, () => {
 ```
 
 ## Documentation
-Documentation is available [here](https://express-app-kit.github.io).
+Generated API specification docs is available [here](https://xonawebsite.github.io/express-app-kit).
 
 ## Notes
 The resulting app is already packed by default with json support, helmet, morgan, cookieParser and expressSession.

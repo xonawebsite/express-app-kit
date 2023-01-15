@@ -1,16 +1,18 @@
 import logger from 'morgan';
-import express from 'express';
+import express, { Express } from 'express';
 import path from 'path';
 import cookieParser from 'cookie-parser';
-import cookieSession from 'cookie-session';
 import expressSession from 'express-session';
 import helmet from 'helmet';
 import { stringGenerator } from '../utils';
 import { ExpressAppConfig } from '../interfaces';
 import { ExpressAppType } from '../enums';
-import { notFoundMiddleware } from '../middleware';
 import { ExpressAppLogLevel } from '../types';
 
+/**
+ * Sets the default created express app config
+ * @readonly
+ **/
 export const defaultExpressAppConfig = {
 	appType: ExpressAppType.EXPRESS_API_APP,
 	logging: true,
@@ -22,8 +24,14 @@ export const defaultExpressAppConfig = {
 	security: true,
 }
 
-export function expressApp(config: ExpressAppConfig = defaultExpressAppConfig) {
-	const app = express();
+/**
+ * Creates and setup a brand new express powered app
+ * @function expressApp
+ * @param {ExpressAppConfig} app configuration object
+ * @return {Express}		 ready to use express app
+ **/
+export function expressApp(config: ExpressAppConfig = defaultExpressAppConfig): Express {
+	const app: Express = express();
 
 	if (config.logging && config.logLevel) {
 		app.use(logger(config.logLevel));
