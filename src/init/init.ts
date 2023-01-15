@@ -39,6 +39,8 @@ export function expressApp(config: ExpressAppConfig = defaultExpressAppConfig) {
 			app.use(expressSession({
 				secret: stringGenerator(16),
 				genid: () => stringGenerator(32),
+				resave: true,
+				saveUninitialized: false,
 				cookie: {
 					secure: true,
 					httpOnly: true,

@@ -61,3 +61,6 @@ app.listen(3000, () => {
 	console.log('App started and listening on port 3000');
 });
 ```
+
+## Notes
+The resulting app is already packed by default with json support, helmet, morgan, cookieParser and expressSession.
