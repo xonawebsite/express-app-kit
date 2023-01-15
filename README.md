@@ -1,7 +1,7 @@
 # express-app-kit
 The minimalistic yet supercharged kit for express apps.
 
-This is intended to become a robust, easy to use, helper kit for creating express apps.
+This library is intended to become a robust, easy to use, helper kit for creating express apps.
 
 Right now, it just features a short way to create an express app.
 
@@ -64,3 +64,6 @@ app.listen(3000, () => {
 
 ## Notes
 The resulting app is already packed by default with json support, helmet, morgan, cookieParser and expressSession.
+
+## Contributing
+Every contribution is welcome. Take a look at the issues and public project, pick a task, solve it, create a passing test for it, and send a pull request.
